@@ -22,12 +22,22 @@
     "replace": {
         "creof/doctrine2-spatial": "*"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/tdomarkas/geo-parser"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/tdomarkas/wkt-parser"
+        }
+    ],
     "require": {
         "php": "^7.4|^8.0",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "creof/geo-parser": "~2.2",
-        "creof/wkt-parser": "~2.2",
+        "creof/geo-parser": "dev-upgrade",
+        "creof/wkt-parser": "dev-upgrade",
         "creof/wkb-parser": "~2.3",
         "doctrine/orm": "^2.8.0"
     },
@@ -68,5 +78,7 @@
             "LongitudeOne\\Spatial": "lib/",
             "LongitudeOne\\Spatial\\Tests": "tests/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
